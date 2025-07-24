@@ -13,6 +13,22 @@ A production-ready, active/passive OPNsense cluster solution that shares a singl
 - **Dry Run Support**: Safe testing without system changes
 - **IPv6 Support**: Optional IPv6 tunnel management
 
+## 📜 Project History
+
+This project builds upon earlier single-script approaches to OPNsense high availability:
+
+**Original Foundation**: [spali's single script solution](https://gist.github.com/spali/2da4f23e488219504b2ada12ac59a7dc) provided the initial framework for CARP-based failover with basic WAN IP management. This pioneering work demonstrated the feasibility of automated failover for single WAN IP scenarios.
+
+**Iterative Development**: [lavacano's enhanced versions](https://gist.github.com/lavacano/a678e65d31df9bec344e572461ed3e10) expanded on the original concept with improved error handling, additional service management, and better logging capabilities. These iterations identified key pain points and reliability issues in production environments.
+
+**Current Solution**: This multi-script architecture represents a complete redesign addressing the limitations discovered in single-script approaches:
+- **Separation of Concerns**: Distinct scripts for different phases (boot enforcement, live failover, route management)
+- **Production Hardening**: Comprehensive error handling, circuit breakers, and failure tracking
+- **Operational Excellence**: Structured logging, dry-run testing, and configuration validation
+- **Maintainability**: Centralized configuration and modular design for easier customization
+
+The evolution from single-script to multi-script architecture reflects lessons learned from real-world deployments and the need for enterprise-grade reliability in critical network infrastructure.
+
 ## 📋 Prerequisites
 
 ### Hardware Requirements
