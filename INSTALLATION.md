@@ -12,6 +12,7 @@ This guide provides step-by-step instructions for installing the OPNsense HA Fai
 ### Pre-Installation Checklist
 - [ ] OPNsense firewalls are running and accessible
 - [ ] CARP is configured and working
+- [ ] WAN interfaces optionally configured with identical MAC addresses
 - [ ] Backup of current configurations created
 - [ ] Network maintenance window scheduled
 
