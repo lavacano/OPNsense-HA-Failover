@@ -35,6 +35,7 @@ The evolution from single-script to multi-script architecture reflects lessons l
 - Two identical OPNsense firewalls
 - Dedicated sync interface between firewalls
 - Shared network segments for WAN and LAN
+- **Recommended**: Configure WAN interfaces with identical MAC addresses for seamless failover
 
 ### OPNsense Configuration
 Before installing the scripts, configure your firewalls:
@@ -58,6 +59,10 @@ Before installing the scripts, configure your firewalls:
    - Use unique VHID for each interface
    - Primary: advskew = 0, Secondary: advskew = 100
 2. Configure **System → High Availability → Settings** to sync from primary to secondary
+3. **Optional but Recommended**: Configure identical MAC addresses on WAN interfaces
+   - Go to **Interfaces → [WAN] → General configuration**
+   - Set the same MAC address on both firewalls' WAN interfaces
+   - This ensures seamless failover without ARP table updates on upstream equipment
 
 ## 🛠️ Installation
 
